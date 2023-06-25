@@ -18,7 +18,7 @@ class vm_seq(BaseModel):
     vmname: str
 
 
-# Get all employees
+# Get all servers
 @app.get("/listseq")
 def get_all_sequences():
     cursor = mydb.cursor()
@@ -26,7 +26,7 @@ def get_all_sequences():
     result = cursor.fetchall()
     return {"sequences": result}
 
-# Get an employee by ID
+# Get an servers by ID
 @app.get("/seqid/{id}")
 def get_seq_is(id: int):
     cursor = mydb.cursor()
